@@ -1,0 +1,34 @@
+cookie:
+  expiry_days: 30
+  key: pfzXppMJEnBcKJSprlHpks-VOSMgHblMdrLhuW5kl8A
+  name: planmytrip_auth_cookie
+credentials:
+  usernames:
+    maneesha@gmail.com:
+      email: maneesha@gmail.com
+      first_name: Maneesha
+      last_name: Yerraboina
+      logged_in: false
+      password: $2b$12$/DAKRU24rRnwvs4lKOSF4.fOyp2IvGMzrvohpp6suZMEBZQ16gnQG
+      roles: null
+    manisha:
+      email: manisha@gmail.com
+      first_name: Yerraboina
+      last_name: Manisha
+      logged_in: false
+      password: $2b$12$NJcIxr0TMMDKwgJWBdGx7Oj37Jb9TYtkww/2ET7GiWIwbzQyzMjum
+      roles: null
+    manju@gmail.com:
+      email: manju@gmail.com
+      first_name: Manjula
+      last_name: Yerraboina
+      logged_in: false
+      password: $2b$12$56SNBJQYFYKEd.zNvVpXguk/9tMUG1wMfZCPOmfwMmFfxQHDMF1/S
+      roles: null
+    princy@gmail.com:
+      email: princy@gmail.com
+      first_name: Princy
+      last_name: Yerraboina
+      logged_in: false
+      password: $2b$12$eb.RbkpwH2oOHlwPIut1weZohgUGsAtXa2pMOVU4CTu.79b.wRfDu
+      roles: null

@@ -1,0 +1,673 @@
+:root {
+    --orange: #e96f4f;
+    --ink: #3a2c22;
+    --ink-soft: #66564c;
+    --cream: #fffaf5;
+    --border: #f0dfd3;
+}
+
+.stApp {
+    background: var(--cream);
+    color: var(--ink);
+}
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
+
+.block-container {
+    max-width: 1180px;
+    padding: 1.5rem 2rem 4rem;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 30px;
+}
+
+.brand {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--ink);
+}
+
+.brand span {
+    color: var(--orange);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink-soft);
+}
+
+.nav-links a {
+    color: var(--ink-soft);
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+.nav-get-started-spacer {
+    height: 8px;
+}
+
+/* Hero (landing page) */
+
+.hero {
+    text-align: center;
+    padding: 70px 20px 20px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: #fff0e8;
+    color: #d85e40;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin: 0 auto 20px;
+    max-width: 850px;
+    color: var(--ink);
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+}
+
+/* Planner hero (smaller, reused on the planner screen) */
+
+.tw-hero {
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
+.tw-hero h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 0;
+}
+
+.tw-hero h1 .hero-ai {
+    color: var(--orange);
+}
+
+.tw-hero p {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* Sections */
+
+.section {
+    padding: 45px 0 25px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 16px;
+    max-width: 620px;
+    margin: 0 auto 38px;
+    line-height: 1.6;
+}
+
+.tw-section-label {
+    font-weight: 800;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    border-left: 4px solid var(--orange);
+    padding-left: 10px;
+    margin-bottom: 8px;
+}
+
+/* Feature cards */
+
+/* Force equal-height cards across each row of feature cards.
+   min-height alone only guarantees a floor, not matching heights -
+   this explicitly stretches every column's content to match the
+   tallest sibling in that row. Scoped to the feature-card row
+   containers only, so it doesn't affect columns used elsewhere
+   in the app (trip details, budget, booking links, etc). */
+
+
+
+.st-key-feature_row_1 [data-testid="column"],
+.st-key-feature_row_2 [data-testid="column"] {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.st-key-feature_row_1 [data-testid="column"] > div,
+.st-key-feature_row_2 [data-testid="column"] > div {
+    width: 100% !important;
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+    min-height: 230px !important;
+    height: 230px !important;
+    width: 100%;
+    box-shadow: 0 8px 25px rgba(80, 50, 30, 0.05);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.feature-card h3 {
+    color: var(--ink);
+    margin: 0 0 8px;
+    font-size: 19px;
+}
+
+.feature-card p {
+    color: #776960;
+    line-height: 1.55;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Step cards */
+
+.step-card {
+    text-align: center;
+    padding: 25px 18px;
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: #fff0e8;
+    color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.step-card h3 {
+    color: var(--ink);
+    margin-bottom: 8px;
+}
+
+.step-card p {
+    color: #776960;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Highlight / CTA banner - now a real st.container(key="highlight_box")
+   so the button renders genuinely inside the peach box, not below it */
+
+.st-key-highlight_box {
+    background: #fff0e8 !important;
+    border: none !important;
+    border-radius: 24px !important;
+    padding: 25px 40px 10px !important;
+    margin: 30px 0 10px !important;
+}
+
+.highlight-inner {
+    text-align: center;
+}
+
+.highlight-inner h2 {
+    color: var(--ink);
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.highlight-inner p {
+    color: var(--ink-soft);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 35px 0 10px;
+    border-top: 1px solid var(--border);
+    color: #87776e;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* Route arrow (planner) */
+
+.route-arrow {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 22px;
+    color: var(--orange);
+    font-weight: 800;
+}
+
+/* Interests label */
+
+.tw-interest-label {
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.tw-interest-label span {
+    color: #e63946;
+    font-size: 1.15rem;
+}
+
+/* Weather + info card */
+
+.tw-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin: 10px 0;
+    box-shadow: 0 6px 18px rgba(80, 50, 30, 0.05);
+}
+
+.tw-pill {
+    display: inline-block;
+    background: var(--orange);
+    color: white !important;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+.tw-weather-title {
+    font-weight: 800;
+    color: var(--ink);
+    margin-top: 12px;
+}
+
+.tw-weather-main {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--orange);
+    margin-top: 8px;
+}
+
+.tw-weather-condition {
+    margin-top: 4px;
+    color: #5f5148;
+}
+
+.tw-weather-details {
+    margin-top: 10px;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+/* Budget status */
+
+.tw-budget-good {
+    background: #eaf7ee;
+    border: 1.5px solid #4caf7d;
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: #1e6b45 !important;
+    font-weight: 700;
+}
+
+.tw-budget-warn {
+    background: #fff0e8;
+    border: 1.5px solid var(--orange);
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: #9c3b2e !important;
+    font-weight: 700;
+}
+
+/* Chat bubbles */
+
+.tw-chat-user {
+    background: #fff0e8;
+    border-radius: 14px 14px 4px 14px;
+    padding: 10px 16px;
+    margin: 6px 0;
+    text-align: right;
+    color: var(--ink) !important;
+}
+
+.tw-chat-ai {
+    background: #f5f0ea;
+    border-radius: 14px 14px 14px 4px;
+    padding: 10px 16px;
+    margin: 6px 0;
+    color: var(--ink) !important;
+}
+
+/* Buttons: primary (CTA) vs secondary (everything else) */
+
+button[kind="primary"] {
+    background: var(--orange) !important;
+    color: white !important;
+    border: none !important;
+    font-weight: 700 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 25px rgba(233, 111, 79, 0.22);
+}
+
+button[kind="primary"]:hover {
+    background: #d85e40 !important;
+}
+
+button[kind="secondary"] {
+    background: white !important;
+    color: var(--ink) !important;
+    border: 1.5px solid var(--border) !important;
+    font-weight: 600 !important;
+    border-radius: 12px !important;
+}
+
+button[kind="secondary"]:hover {
+    border-color: var(--orange) !important;
+    color: var(--orange) !important;
+}
+
+/* Link buttons (booking links) - neutral, not orange */
+
+[data-testid="stLinkButton"] {
+    width: 100%;
+}
+
+[data-testid="stLinkButton"] a {
+    width: 100%;
+    border-radius: 10px !important;
+    font-weight: 700 !important;
+    background: white !important;
+    color: var(--ink) !important;
+    border: 1.5px solid var(--border) !important;
+}
+
+[data-testid="stLinkButton"] a:hover {
+    border-color: var(--orange) !important;
+    color: var(--orange) !important;
+}
+
+/* Chat input */
+
+[data-testid="stChatInput"] {
+    margin-top: 12px;
+}
+
+[data-testid="stChatInput"] textarea {
+    border-radius: 18px !important;
+}
+
+[data-testid="stChatInput"] button {
+    border-radius: 50% !important;
+}
+
+/* Tables inside markdown */
+
+[data-testid="stMarkdownContainer"] table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+}
+
+[data-testid="stMarkdownContainer"] th {
+    background: #fff0e8;
+    color: var(--ink);
+    padding: 9px;
+    text-align: left;
+}
+
+[data-testid="stMarkdownContainer"] td {
+    padding: 9px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+[data-testid="stMarkdownContainer"] ul {
+    padding-left: 1.5rem;
+}
+
+[data-testid="stMarkdownContainer"] li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* Tabs */
+
+button[data-baseweb="tab"] {
+    font-weight: 700 !important;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .tw-hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .block-container {
+        padding: 1rem;
+    }
+
+    .route-arrow {
+        display: none;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   AUTH PAGE (Login / Sign Up)
+   ═══════════════════════════════════════════════════════════ */
+
+/* The card wrapping the whole login/signup box */
+
+.st-key-auth_card {
+    background: white !important;
+    border: 1.5px solid var(--border) !important;
+    border-radius: 20px !important;
+    padding: 10px 30px 25px !important;
+    box-shadow: 0 12px 35px rgba(80, 50, 30, 0.08) !important;
+}
+
+/* Tabs: orange active indicator instead of Streamlit's default red */
+
+.st-key-auth_card [data-baseweb="tab-list"] {
+    gap: 20px;
+    justify-content: center;
+}
+
+.st-key-auth_card [data-baseweb="tab-highlight"] {
+    background-color: var(--orange) !important;
+}
+
+.st-key-auth_card button[data-baseweb="tab"] {
+    color: var(--ink-soft) !important;
+    font-weight: 700 !important;
+}
+
+.st-key-auth_card button[aria-selected="true"] {
+    color: var(--orange) !important;
+}
+
+/* Text inputs inside the auth form */
+
+.st-key-auth_card [data-testid="stTextInput"] input {
+    border-radius: 10px !important;
+    border: 1.5px solid var(--border) !important;
+    background: var(--cream) !important;
+    color: var(--ink) !important;
+}
+
+.st-key-auth_card [data-testid="stTextInput"] input:focus {
+    border-color: var(--orange) !important;
+    box-shadow: 0 0 0 2px rgba(233, 111, 79, 0.18) !important;
+}
+
+.st-key-auth_card [data-testid="stTextInput"] label {
+    color: var(--ink) !important;
+    font-weight: 600 !important;
+}
+
+/* Checkbox label on the signup tab */
+
+.st-key-auth_card [data-testid="stCheckbox"] label p {
+    color: var(--ink-soft) !important;
+    font-size: 14px !important;
+}
+
+/* Submit buttons rendered inside the auth form - make them solid
+   orange primary-style CTAs, scoped only to stForm so it doesn't
+   affect secondary buttons elsewhere in the app */
+
+[data-testid="stForm"] button[kind="secondary"] {
+    background: var(--orange) !important;
+    color: white !important;
+    border: none !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    width: 100%;
+}
+
+[data-testid="stForm"] button[kind="secondary"]:hover {
+    background: #d85e40 !important;
+    color: white !important;
+}
+
+/* Small disclaimer text under the login tab */
+
+.auth-footnote {
+    text-align: center;
+    color: #9a8a7f;
+    font-size: 12.5px;
+    margin-top: 14px;
+    line-height: 1.5;
+}
+
+/* Profile icon (popover trigger) - pinned to the true top-right
+   corner of the browser viewport via position:fixed, since the
+   page content itself is centered with a max-width and doesn't
+   reach the real screen edge. */
+
+.st-key-profile_popover {
+    position: fixed !important;
+    top: 65px;
+    right: 24px;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+}
+
+.st-key-profile_popover button[data-testid="stPopoverButton"] {
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    padding: 0 !important;
+    background: var(--orange) !important;
+    border: none !important;
+    box-shadow: 0 4px 14px rgba(233, 111, 79, 0.35);
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    pointer-events: auto !important;
+}
+
+.st-key-profile_popover button[data-testid="stPopoverButton"] p {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.st-key-profile_popover button[data-testid="stPopoverButton"]:hover {
+    background: #d85e40 !important;
+}
+
+/* Hide the built-in dropdown chevron - we just want a clean icon */
+
+[data-testid="stPopoverButton"] [data-testid="stIconMaterial"] {
+    display: none !important;
+}
+
+/* The popover panel itself renders through a portal (not nested
+   inside .st-key-profile_popover in the DOM), so this has to be
+   a global selector. Safe here since it's the only popover in the app. */
+
+[data-testid="stPopoverBody"] {
+    min-width: 200px !important;
+    width: auto !important;
+    padding: 16px 20px !important;
+    border-radius: 14px !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: 0 12px 30px rgba(80, 50, 30, 0.14) !important;
+}
+
+[data-testid="stPopoverBody"] hr {
+    margin: 10px 0 !important;
+}

@@ -1,6 +1,7 @@
 import datetime
 import re
 import urllib.parse
+from pathlib import Path
 
 import requests
 import streamlit as st
@@ -22,7 +23,9 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-with open("style.css", "r", encoding="utf-8") as f:
+BASE_DIR = Path(__file__).resolve().parent
+
+with open(BASE_DIR / "style.css", "r", encoding="utf-8") as f:
     st.markdown(
         f"<style>{f.read()}</style>",
         unsafe_allow_html=True,

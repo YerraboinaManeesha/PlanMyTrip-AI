@@ -117,4 +117,4 @@ https://planmytrip-ai.streamlit.app/
 
 **Maneesha Yerraboina**
 
-MSc Computer Science Graduate | Aspiring Web Developer
+MSc Computer Science Graduate
